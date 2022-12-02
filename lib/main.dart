@@ -10,13 +10,13 @@ import 'package:provider_part_one/view_model/counter_view_model.dart';
 
 void main() {
   MyRepository myRepository = MyRepository(apiService: ApiService(), localDatabase: LocalDatabase());
-  CounterViewModel myObject = CounterViewModel();
-  BellaViewModel bellaViewModel = BellaViewModel(myRepository: myRepository);
+  // CounterViewModel myObject = CounterViewModel();
+  // BellaViewModel bellaViewModel = BellaViewModel(myRepository: myRepository);
   runApp(
     MultiProvider(
       providers: [
-        ChangeNotifierProvider(create: (_) => myObject),
-        ChangeNotifierProvider(create: (_) => bellaViewModel),
+        ChangeNotifierProvider(create: (_) => CounterViewModel()),
+        ChangeNotifierProvider(create: (_) => BellaViewModel(myRepository: myRepository)),
       ],
       child: MyApp(),
     ),

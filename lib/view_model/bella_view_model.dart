@@ -5,6 +5,7 @@ import 'package:provider_part_one/data/repositories/my_repository.dart';
 class BellaViewModel extends ChangeNotifier {
   BellaViewModel({required MyRepository myRepository}) {
     _myRepository = myRepository;
+    fetchBellaInfo();
   }
 
   late MyRepository _myRepository;

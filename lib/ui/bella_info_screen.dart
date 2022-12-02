@@ -38,7 +38,9 @@ class BellaInfoScreen extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          context.read<BellaViewModel>().fetchBellaInfo();
+           Provider.of<BellaViewModel>(context,listen: true).fetchBellaInfo();
+          //context.watch<BellaViewModel>().fetchBellaInfo(); // listen: true
+          //context.read<BellaViewModel>().fetchBellaInfo(); //listen: false
         },
         child: const Icon(Icons.download),
       ),
