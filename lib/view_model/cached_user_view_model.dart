@@ -34,7 +34,6 @@ class CachedUserViewModel extends ChangeNotifier {
     int deletedUserId = await _myRepository.deleteUSer(id);
     if (deletedUserId != -1) {
       cachedUsers.remove(cachedUsers.firstWhere((element) => element.id == id));
-
       notify(false);
     }
   }

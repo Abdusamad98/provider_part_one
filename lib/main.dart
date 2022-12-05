@@ -18,7 +18,7 @@ void main() {
       providers: [
         ChangeNotifierProvider(create: (_) => CounterViewModel()),
         ChangeNotifierProvider(create: (_) => BellaViewModel(myRepository: myRepository)),
-        ChangeNotifierProvider(create: (_) => CachedUserViewModel(myRepository: myRepository)),
+        //ChangeNotifierProvider(create: (_) => CachedUserViewModel(myRepository: myRepository)),
       ],
       child: MyApp(),
     ),
